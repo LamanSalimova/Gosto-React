@@ -111,3 +111,9 @@ header.active {
     @include positions(absolute, 110%, none, none, 20px, 450px, auto);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .left {
+    display: none;
+  }
+}

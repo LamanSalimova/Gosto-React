@@ -54,12 +54,16 @@
       input {
         width: 70%;
       }
+      span,
+      hr {
+        display: none;
+      }
     }
   }
 
   // card
   .cards {
-    @include grid(repeat(3, 1fr), 30px);
+    @include grid(repeat(2, 1fr), 30px);
   }
   .topproduct,
   .product {
@@ -86,7 +90,7 @@
   }
   .price {
     .content {
-      @include grid(repeat(1, 1fr), 30px);
+      @include grid(repeat(2, 1fr), 30px);
       place-items: center;
     }
   }
@@ -99,6 +103,72 @@
     .posts {
       @include grid(repeat(1, 1fr), 30px);
       place-items: center;
+    }
+  }
+}
+
+//Mobile
+
+@include media-sm {
+  header.active {
+    .showCart {
+      width: 90%;
+    }
+  }
+  .hero {
+    .search {
+      margin-bottom: $md;
+    }
+  }
+
+  .price {
+    .content {
+      @include grid(repeat(1, 1fr), 30px);
+      place-items: center;
+    }
+  }
+  .search {
+    span,
+    hr {
+      display: none;
+    }
+  }
+
+  .card {
+    @include flex(center, center, column);
+    row-gap: $lg;
+
+    .left {
+      display: block;
+
+      img {
+        width: 92px;
+      }
+    }
+
+    .right {
+      @include flex(center, center, column);
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+  .customer {
+    .content {
+      @include grid(repeat(1, 1fr), 30px);
+    }
+  }
+  .banner {
+    display: none;
+  }
+
+  .price {
+    .heading {
+      p {
+        text-align: center;
+        padding: 0 $xl-4;
+      }
     }
   }
 }

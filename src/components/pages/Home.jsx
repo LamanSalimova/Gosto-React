@@ -15,7 +15,7 @@ export default function Home() {
       <Card />
       <Products />
       <Banner />
-      <TopProducts />
+      {/* <TopProducts /> */}
       <Price />
       <Testimonial />
       <Blog />
